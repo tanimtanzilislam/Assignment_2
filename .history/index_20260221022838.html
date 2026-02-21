@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment-2</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-900">
+  <!-- NAV -->
+  <nav class="max-w-[1600px] mx-auto flex items-center justify-between bg-gray-800 text-white px-12 py-8">
+    <!-- Logo -->
+    <div>
+      <span class="text-2xl">Tech</span>
+      <span class="text-2xl font-bold bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">
+        Wave
+      </span>
+    </div>
+
+    <!-- Menu -->
+    <ul class="flex gap-8">
+      <li>About</li>
+      <li>Episodes</li>
+      <li>Host</li>
+    </ul>
+
+    <!-- Button -->
+    <button type="button"
+      class="w-[132px] h-[44px] bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] rounded-xl">
+      subscribe
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section>
+    <div
+      class="relative max-w-[1600px] mx-auto h-[760px]
+             bg-[url('/assets/hero-bg.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <img
+        src="/assets/hero-circle.png"
+        alt=""
+        class="absolute right-[128px] top-[50px]"
+      />
+
+      <img
+        src="/assets/microphone.png"
+        alt=""
+        class="absolute right-[158px] top-[70px]"
+      />
+    </div>
+  </section>
+</body>
+</html>
