@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment-2</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-[#0b0b14] text-white">
+
+  <!-- NAVBAR -->
+  <nav class="w-full bg-gray-800/90 backdrop-blur">
+    <div class="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-6">
+      <!-- Logo -->
+      <a href="#" class="text-2xl">
+        <span>Tech</span>
+        <span class="font-extrabold bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">
+          Wave
+        </span>
+      </a>
+
+      <!-- Links -->
+      <ul class="hidden items-center gap-8 md:flex">
+        <li><a class="text-white/90 hover:text-white transition" href="#">About</a></li>
+        <li><a class="text-white/90 hover:text-white transition" href="#">Episodes</a></li>
+        <li><a class="text-white/90 hover:text-white transition" href="#">Host</a></li>
+      </ul>
+
+      <!-- Button -->
+      <a
+        href="#"
+        class="inline-flex h-[44px] w-[132px] items-center justify-center rounded-xl
+               bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8]
+               font-semibold text-white transition hover:brightness-110 active:scale-[0.98]"
+      >
+        Subscribe
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="mx-auto max-w-[1600px] px-6 py-10">
+    <div class="relative overflow-hidden rounded-3xl bg-[url('assets/hero-bg.png')] bg-cover bg-center">
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 grid min-h-[760px] grid-cols-1 items-center gap-12 px-6 py-16 md:grid-cols-2 md:px-14">
+
+        <!-- Left -->
+        <div class="text-center md:text-left">
+          <h1 class="text-[48px] font-extrabold leading-[1.05] sm:text-[64px] lg:text-[76px]">
+            Techwave
+          </h1>
+
+          <p class="mt-5 max-w-xl text-white/90 text-base sm:text-lg md:mx-0 mx-auto">
+            Your daily dose of tech insights, productivity hacks, and personal growth
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+            <!-- Spotify -->
+            <a
+              href="#"
+              class="inline-flex items-center gap-3 rounded-full px-6 py-3 text-sm font-semibold text-white
+                     bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8]
+                     shadow-lg shadow-fuchsia-500/20
+                     transition hover:brightness-110 active:scale-[0.98]"
+            >
+              <i class="fa-brands fa-spotify text-lg"></i>
+              <span>Listen On Spotify</span>
+            </a>
+
+            <!-- Subscribe -->
+            <a
+              href="#"
+              class="inline-flex items-center gap-3 rounded-full px-7 py-3 text-sm font-semibold
+                     text-emerald-300 bg-black/30
+                     ring-1 ring-emerald-300/80
+                     shadow-[0_0_0_1px_rgba(110,231,183,0.25),0_12px_30px_rgba(16,185,129,0.12)]
+                     backdrop-blur-md
+                     transition hover:bg-black/40 hover:ring-emerald-200
+                     active:scale-[0.98]"
+            >
+              <span class="text-lg">✉️</span>
+              <span>Subscribe</span>
+            </a>
+          </div>
+
+          <!-- Small extra info (optional) -->
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-4 text-white/80 md:justify-start">
+            <div class="flex items-center gap-2">
+              <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+              <span>New episodes weekly</span>
+            </div>
+            <div class="hidden sm:block h-4 w-px bg-white/20"></div>
+            <div>Tech • Productivity • Growth</div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="relative mx-auto hidden w-full max-w-[560px] md:block">
+          <!-- circle -->
+          <img
+            src="assets/hero-circle.png"
+            alt=""
+            class="absolute right-6 top-4 w-[360px] opacity-90 lg:w-[420px]"
+          />
+
+          <!-- microphone -->
+          <img
+            src="assets/microphone.png"
+            alt="Microphone"
+            class="relative z-10 mx-auto w-[260px] translate-y-10 lg:w-[320px]"
+          />
+
+          <!-- glow -->
+          <div class="absolute -bottom-10 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-fuchsia-500/25 blur-3xl"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full pb-10">
+    <div class="mx-auto max-w-[1600px] px-6">
+      <div class="h-[412px] w-full overflow-hidden rounded-3xl bg-[url('assets/footer-bg.png')] bg-cover bg-center">
+        <div class="flex h-full flex-col items-center justify-center gap-10 px-6 text-center">
+
+          <div class="text-5xl font-extrabold">
+            <span class="text-white">Tech</span>
+            <span class="bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">
+              Wave
+            </span>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-10">
+            <a class="flex items-center gap-3 text-white/90 hover:text-white transition" href="#">
+              <img src="assets/spotify.png" alt="Spotify" class="h-6 w-6" />
+              <span>Spotify</span>
+            </a>
+
+            <a class="flex items-center gap-3 text-white/90 hover:text-white transition" href="#">
+              <img src="assets/apple-podcast.png" alt="Apple Podcasts" class="h-6 w-6" />
+              <span>Apple Podcasts</span>
+            </a>
+
+            <a class="flex items-center gap-3 text-white/90 hover:text-white transition" href="#">
+              <img src="assets/youtube.png" alt="YouTube" class="h-6 w-6" />
+              <span>YouTube</span>
+            </a>
+
+            <a class="flex items-center gap-3 text-white/90 hover:text-white transition" href="#">
+              <img src="assets/twitter.png" alt="Twitter" class="h-6 w-6" />
+              <span>Twitter</span>
+            </a>
+          </div>
+
+          <p class="text-white/60 text-sm">
+            © 2026 TechWave. All rights reserved.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

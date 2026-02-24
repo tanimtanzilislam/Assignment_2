@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <nav class=" flex relative bg-gray-800 text-white ">
+
+        <div class="pt-8 pb-8 pl-50 pr-79">
+           <span class="text-2xl bg-">Tech</span><span class="text-2xl font-bold bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">Wave</span>
+        </div>
+        <div class="flex ">
+
+            <ul class="flex flex-row gap-8 pt-8 pb-8">          
+                  <li> About</li>
+            <li> Episodes</li>
+            <li> Host</li>
+
+            </ul>      
+
+
+        </div>
+        
+           <div class="ml-50"><button type="button" class=" w-[132px] h-[44px]  mt-5 pt-1 pb-1 pr-1 bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8]  rounded-xl align-middle">subscribe</button></div>
+            
+        
+    </nav>
+
+  <section class="mx-auto max-w-[1600px] px-6 py-10">
+  <div class="relative overflow-hidden rounded-3xl bg-[url('assets/hero-bg.png')] bg-cover bg-center">
+    <!-- overlay -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- main content -->
+    <div class="relative z-10 grid min-h-[760px] grid-cols-1 items-center gap-12 px-6 py-16 md:grid-cols-2 md:px-14">
+      
+      <!-- LEFT: text -->
+      <div class="text-center md:text-left">
+        <h1 class="text-white text-[48px] font-extrabold leading-[1.05] sm:text-[64px] lg:text-[76px]">
+          Techwave
+        </h1>
+
+        <p class="mt-5 max-w-xl text-white/90 text-base sm:text-lg md:mx-0 mx-auto">
+          Your daily dose of tech insights, productivity hacks, and personal growth
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+          <!-- Spotify button -->
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 rounded-full px-6 py-3 text-sm font-semibold text-white
+                   bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8]
+                   shadow-lg shadow-fuchsia-500/20
+                   transition hover:brightness-110 active:scale-[0.98]"
+          >
+            <i class="fa-brands fa-spotify text-lg"></i>
+            <span>Listen On Spotify</span>
+          </a>
+
+          <!-- Subscribe button -->
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 rounded-full px-7 py-3 text-sm font-semibold
+                   text-emerald-300 bg-black/30
+                   ring-1 ring-emerald-300/80
+                   shadow-[0_0_0_1px_rgba(110,231,183,0.25),0_12px_30px_rgba(16,185,129,0.12)]
+                   backdrop-blur-md
+                   transition hover:bg-black/40 hover:ring-emerald-200
+                   active:scale-[0.98]"
+          >
+            <span class="text-lg">✉️</span>
+            <span>Subscribe</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: images -->
+      <div class="relative mx-auto hidden w-full max-w-[560px] md:block">
+        <img
+          src="assets/hero-circle.png"
+          alt=""
+          class="absolute right-6 top-4 w-[360px] opacity-90 lg:w-[420px]"
+        />
+
+        <img
+          src="assets/microphone.png"
+          alt="Microphone"
+          class="relative z-10 mx-auto w-[260px] translate-y-10 lg:w-[320px]"
+        />
+
+        <!-- glow -->
+        <div class="absolute -bottom-10 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-fuchsia-500/25 blur-3xl"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+   <footer>
+    <div class="  max-w-[1600px] max-auto h-[412px] bg-[url('assets/footer-bg.png')]">
+
+        <div class="p-[120px] ">
+            <div class="text-center">
+        <span class="text-5xl font-bold text-white">Tech</span><span class="text-5xl font-bold bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">Wave</span>
+           </div>
+
+
+           <div class="flex gap-[40px] mr-[408px] ml-[408px] ">
+           <div class="flex gap-3">
+            <img src="/assets/spotify.png" alt="">
+            <spna class="text-white"> spotify</spna>
+           </div>
+           <div class="flex gap-3">
+            <img src="/assets/apple-podcast.png" alt="">
+            <spna class="text-white">ApplePodcasts</spna>
+           </div>
+           <div class="flex gap-3">
+            <img src="/assets/youtube.png" alt="">
+            <spna class="text-white">Youtube</spna>
+           </div>
+           <div class="flex gap-3">
+            <img src="/assets/twitter.png" alt="">
+            <spna class="text-white">Twitter</spna>
+           </div>
+
+           
+           </div>
+        </div>
+    </div>
+   </footer>
+</body>
+</html>
