@@ -65,60 +65,66 @@
         </div>
     </section>
 
-    <footer class="bg-gray-950 bg-[url('assets/footer-bg.png')] bg-cover bg-center py-20 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
-            <!-- bg-cover: bg image full footer area cover korbe 
-             bg-center: bg image center theke align hbe footer er 
-             py-20: top bottom 20*4=80px jaiga rakhbe vitore
-             borer-t: footer er upore ekta border dei top er dike
-             border-gray-800: top border er color
-             
-             -->
-            
-            <div class="text-center mb-10">
-                <span class="text-4xl md:text-5xl font-bold text-white">Tech</span><span class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">Wave</span>
-            </div>
+   <footer class="bg-gray-950 bg-[url('assets/footer-bg.png')] bg-cover bg-center py-20 border-t border-gray-800">
 
-            <!-- bg-clip-text: bg ke text er sathe soman size e clip koresi
-                text-transparent: text er color transparent koresi jate bg er color ta text er moddhe dekha jai
-              -->
+  <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
 
-            <div class="flex flex-wrap justify-center gap-8 md:gap-12">
-                <!-- flex-wrap: dile jodi jaiga na thake taile element gula niche neme jabe
-                 justify-center: x axis borabor shob element ke center e nibe
-                  -->
-                <a  class="flex justify-center gap-3 group hover:-translate-y-1 transition-transform">
+    <!-- Logo -->
+    <div class="text-center mb-12">
+      <span class="text-4xl md:text-5xl font-bold text-white">Tech</span>
+      <span class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] bg-clip-text text-transparent">
+        Wave
+      </span>
+    </div>
 
-                    <!-- group hover dewa hoi parent a thaka element gula eksathe hover hbe
-                         -translate-y-1 dewa hoi cz uporer dike 1=0.25rem=4px upore uthbe -->
+    <!-- Social Links -->
+    <div class="flex flex-wrap justify-center gap-y-6 gap-x-8 md:gap-12 max-w-md md:max-w-none mx-auto">
 
-                    <!-- justify-center: x axix borabor center kore 
-                     items-center:  y axis borabor center kore
-                     ekhne icon+ image y axis borabor same houa drkar tai eta dise-->
+      <!-- Spotify -->
+      <a href="#"
+         class="w-1/2 md:w-auto flex items-center justify-center gap-3 group transition-transform hover:-translate-y-1">
+        <img src="assets/spotify.png" alt="Spotify" class="w-6 h-6 object-contain">
+        <span class="text-gray-400 group-hover:text-white font-medium transition">
+          Spotify
+        </span>
+      </a>
 
-                     <!-- transition-transform na dile hover er somoy onk fast uthe darabe, dile aste darabe -->
+      <!-- Apple Podcasts -->
+      <a href="#"
+         class="w-1/2 md:w-auto flex items-center justify-center gap-3 group transition-transform hover:-translate-y-1">
+        <img src="assets/apple-podcast.png" alt="Apple Podcasts" class="w-6 h-6 object-contain">
+        <span class="text-gray-400 group-hover:text-white font-medium transition">
+          Apple Podcasts
+        </span>
+      </a>
 
-                    <img src="assets/spotify.png" alt="Spotify" class="w-6 h-6 object-contain">
+      <!-- YouTube -->
+      <a href="#"
+         class="w-1/2 md:w-auto flex items-center justify-center gap-3 group transition-transform hover:-translate-y-1">
+        <img src="assets/youtube.png" alt="YouTube" class="w-6 h-6 object-contain">
+        <span class="text-gray-400 group-hover:text-white font-medium transition">
+          YouTube
+        </span>
+      </a>
 
-                    <!-- object-contain: image kata jabena.full image dekha jabe -->
-                    <span class="text-gray-400 group-hover:text-white font-medium">Spotify</span>
-                </a>
-                <a  class="flex items-center gap-3 group hover:-translate-y-1 transition-transform">
-                    <img src="assets/apple-podcast.png" alt="Apple Podcasts" class="w-6 h-6 object-contain">
-                    <span class="text-gray-400 group-hover:text-white font-medium">Apple Podcasts</span>
-                </a>
-                <a  class="flex items-center gap-3 group hover:-translate-y-1 transition-transform">
-                    <img src="assets/youtube.png" alt="YouTube" class="w-6 h-6 object-contain">
-                    <span class="text-gray-400 group-hover:text-white font-medium">YouTube</span>
-                </a>
-                <a class="flex items-center gap-3 group hover:-translate-y-1 transition-transform">
-                    <img src="assets/twitter.png" alt="Twitter" class="w-6 h-6 object-contain">
-                    <span class="text-gray-400 group-hover:text-white font-medium">Twitter</span>
-                </a>
-            </div>
+      <!-- Twitter -->
+      <a href="#"
+         class="w-1/2 md:w-auto flex items-center justify-center gap-3 group transition-transform hover:-translate-y-1">
+        <img src="assets/twitter.png" alt="Twitter" class="w-6 h-6 object-contain">
+        <span class="text-gray-400 group-hover:text-white font-medium transition">
+          Twitter
+        </span>
+      </a>
 
-        </div>
-    </footer>
+    </div>
 
+    <!-- Copyright -->
+    <p class="mt-12 text-sm text-gray-500 text-center">
+      © 2026 TechWave. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
 </body>
 </html>
