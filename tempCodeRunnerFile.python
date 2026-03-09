@@ -1,0 +1,97 @@
+# %%
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+import math
+
+# %%
+import os
+import numpy as np
+
+def find_file(filename):
+    for root, _, files in os.walk("/kaggle/input"):
+        if filename in files:
+            return os.path.join(root, filename)
+
+data = np.loadtxt(find_file("data_k_mean.txt"))  
+
+print("Data shape:", data.shape)
+print("First 5 rows:\n", data[:5])
+
+# %%
+plt.scatter(data[:, 0], data[:, 1], color='blue', s=10)
+plt.title('All Data Points')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.grid(True)
+plt.show()
+
+# %%
+def euclidean_distance(p1, p2):
+    return math.sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2)
+
+def kmeans(data, K=2):
+    # Step 1: Pick K random points from data as initial centroids
+    random_indices = random.sample(range(len(data)), K)
+    centroids = [data[i] for i in random_indices]
+    print(f"Initial centroids: {[c.tolist() for c in centroids]}")
+
+    iteration = 0
+
+    while True:
+        # Step 2: Assign each point to nearest centroid
+        clusters = [[] for _ in range(K)]
+        labels = []
+
+        for point in data:
+            distances = [euclidean_distance(point, c) for c in centroids]
+            nearest = distances.index(min(distances))
+            clusters[nearest].append(point)
+            labels.append(nearest)
+
+        # Step 3: Update centroids (mean of each cluster)
+        new_centroids = []
+        for i in range(K):
+            if len(clusters[i]) > 0:
+                new_centroid = np.mean(clusters[i], axis=0)
+                new_centroids.append(new_centroid)
+            else:
+                new_centroids.append(centroids[i])  # keep old if empty
+
+        iteration += 1
+        print(f"Iteration {iteration}: centroids = {[c.tolist() for c in new_centroids]}")
+
+        # Step 4: Stop if centroids didn't change
+        if all(euclidean_distance(new_centroids[i], centroids[i]) < 0.0001 for i in range(K)):
+            print(f"\nConverged after {iteration} iterations!")
+            break
+
+        centroids = new_centroids
+
+    return labels, centroids
+
+# Run K-Means
+labels, final_centroids = kmeans(data, K=2)
+
+# %%
+colors = ['red', 'green']
+
+for cluster_id in range(2):
+    points = [data[i] for i in range(len(data)) if labels[i] == cluster_id]
+    points = np.array(points)
+    plt.scatter(points[:, 0], points[:, 1],
+                color=colors[cluster_id], s=10, label=f'Cluster {cluster_id + 1}')
+
+# Plot centroids as stars
+for i, c in enumerate(final_centroids):
+    plt.scatter(c[0], c[1], color='black', marker='*', s=300, zorder=5, label=f'Centroid {i+1}')
+
+plt.title('K-Means Clustering (K=2)')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
